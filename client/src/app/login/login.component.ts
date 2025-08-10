@@ -69,7 +69,7 @@ export class LoginComponent implements OnInit {
   }
 
   /**
-   * Initializ eimbox messages for the new user
+   * Initialize inbox messages for the new user
    */
   initInbox(userId, userType) {
     let query: any = {};

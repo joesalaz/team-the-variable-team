@@ -6,113 +6,102 @@
 
 ## 2025 Modernization Project
 
-Jose Salazar -member of team-the-variable-team. I am currently modernizing this 6-year-old capstone project to finally achieve live deployment and enhance the application beyond the original scope. Our team never had the opportunity to deploy this application live in 2019, and this modernization effort aims to not only make it production-ready but also implement features that time constraints prevented during the original capstone timeline.
+I'm bringing this old capstone project up to modern standards since the dependencies are way out of date and some have security issues.
 
-### Modernization Status
+### Modernization Progress
 
-- **Original**: 2019 Angular 7 application with 40+ deprecated dependencies
-- **Target**: Modern Angular 18+ with current security patches
-- **Progress**: Documentation phase complete, environment restoration in progress
-- **Documentation**: [Full Modernization Plan](./MODERNIZATION-PLAN-2025.md)
+- **Started with**: 2019 Angular 7 app with tons of outdated dependencies
+- **Upgrading to**: Modern Angular 18+ with current security patches
+- **Current status**: Planning done, starting the actual updates
+- **Plan details**: [Full Modernization Plan](./MODERNIZATION-PLAN-2025.md)
 
-### Technical Debt Addressed
+### What I'm updating
 
-- Angular 7.2.15 to Angular 18+ (6 major version upgrade)
-- TypeScript 3.2.2 to TypeScript 5.x (modern type safety)
-- Protractor (deprecated) to Cypress (modern E2E testing)
-- TSLint (deprecated) to ESLint (current linting standards)
-- 40+ security vulnerabilities to All dependencies updated and secured
-
-This modernization focuses on bringing the application up to current standards for reliable production deployment and implementing features that were originally planned but not completed due to project timeline constraints.
+- Angular 7.2.15 → Angular 18+ (pretty big jump)
+- TypeScript 3.2.2 → TypeScript 5.x (way better type checking)
+- Protractor (dead) → Cypress (actually maintained)
+- TSLint (also dead) → ESLint (current standard)
+- Fixed 40+ security vulnerabilities in old packages
 
 ---
 
-## Project Overview
+## About This Project
 
-A comprehensive full-stack employment platform connecting students and employers, developed as our capstone project at Southern Careers Institute (2019). This application facilitates job posting, candidate discovery, and direct communication between employers and job seekers.
+A full-stack employment platform we built for our capstone project at Southern Careers Institute back in 2019. It connects students looking for jobs with employers who are hiring.
 
-## Key Features
+## What It Does
 
-- **User Authentication**: Secure login system for students, employers, and administrators
-- **Job Posting Platform**: Rich text job posting with Froala WYSIWYG editor
-- **Real-time Messaging**: Direct communication between employers and candidates
-- **Profile Management**: Comprehensive profiles for both students and employers
-- **Search & Discovery**: Advanced filtering for jobs and candidates
-- **Admin Dashboard**: Administrative oversight and user management
-- **File Management**: Resume uploads and document handling
+- **User accounts**: Students, employers, and admins can all sign up and log in
+- **Job postings**: Employers can post jobs with a rich text editor
+- **Messaging**: Direct messages between employers and students
+- **Profiles**: Both students and employers have profile pages
+- **Search**: Find jobs or candidates with filters
+- **Admin panel**: Admin users can manage everything
+- **File uploads**: Students can upload resumes
 
-## Team "The Variable Team" - Contributions
+## Team "The Variable Team"
 
-### Jose Salazar - Lead Full-Stack Developer
+### Jose Salazar - Full-Stack Developer
 
-Primary Architect of Core Systems
+I did most of the backend work and some frontend components:
 
-- **Authentication & Security**: Implemented Passport.js authentication with encrypted passwords
+- **Login system**: Set up Passport.js with password encryption
+- **Job posting**: Built the whole job posting system with Froala editor
+- **Messaging**: Created the messaging system between users
+- **Security fixes**: Fixed some issues where users could access other people's profiles
+- **Components**: Made reusable Angular components for displaying user lists
+- **Database**: Set up all the Sequelize models and relationships
 
-- **Job Posting Platform**: Built complete CRUD operations with Froala WYSIWYG integration
-
-- **Messaging System**: Developed real-time communication between employers and candidates
-- **Security Implementation**: Fixed critical security vulnerabilities in user routing and access control
-- **Component Architecture**: Created reusable Angular components for user lists and interactions
-- **Database Integration**: Designed and implemented Sequelize ORM models and relationships
-
-Notable Commits (25+ contributions):
+Some of my commits:
 
 - "Implemented Authentication to encrypt passwords, check usernames and passwords for proper login and profile routing"
 - "Added messaging between users, created message-dialog component"
 - "created employers list component to display employers to the student, created emp-job-post-view component"
 - "Fixes for security issue... When a user could navigate to any user profile page by replacing id number in the url"
 
-### JMatthiasH - Integration Lead & Project Manager
+### JMatthiasH
 
-- Project coordination and branch management
-- Database configuration and deployment setup
-- UI styling and design implementation
-- Route configuration and testing
+- Managed the project and coordinated between team members
+- Set up database config and deployment
+- Worked on UI styling and routing
 
-### CarolineMacarius - Admin System Developer
+### CarolineMacarius
 
-- Admin dashboard design and functionality
-- User management interface
-- Database administration features
-- CSS styling and layout improvements
+- Built the admin dashboard and user management
+- Worked on CSS styling and layouts
 
-### cortngiles13 - Student Profile System
+### cortngiles13
 
-- Student profile components and functionality
-- Student signup system
-- Profile management features
-- Database model contributions
+- Created the student profile system and signup flow
+- Contributed to database models
 
-### flesh-atoms - Database Architecture
+### flesh-atoms
 
-- Database design and schema
-- Model relationships and associations
-- Data structure optimization
+- Designed the database schema and relationships
+- Optimized data structures
 
-## Technical Architecture
+## Tech Stack
 
 ### Frontend
 
-- **Framework**: Angular 7+ with TypeScript
-- **Styling**: Bootstrap 4 + Custom CSS
-- **Rich Text**: Froala WYSIWYG Editor
-- **Icons**: Font Awesome
-- **UI Components**: Angular Material
+- Angular 7+ with TypeScript
+- Bootstrap 4 for styling
+- Froala WYSIWYG Editor for rich text
+- Font Awesome icons
+- Angular Material components
 
 ### Backend
 
-- **Runtime**: Node.js
-- **Framework**: Express.js
-- **Authentication**: Passport.js with local strategy
-- **Session Management**: Express-session
-- **API**: RESTful endpoints
+- Node.js with Express
+- Passport.js for login
+- Express-session for user sessions
+- REST API endpoints
 
 ### Database
 
-- **Database**: SQLite
-- **ORM**: Sequelize
-- **Models**: Users (Students/Employers), Job Posts, Messages, Comments
+- SQLite database
+- Sequelize ORM
+- Models for users, job posts, messages, etc.
 
 ### Development Tools
 
@@ -184,21 +173,22 @@ Notable Commits (25+ contributions):
 
 ## Project Structure
 
-```team-the-variable-team/
-├── client/                     # Angular frontend
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── admin/         # Admin components
-│   │   │   ├── employer/      # Employer components
-│   │   │   ├── student/       # Student components
-│   │   │   ├── services/      # Angular services
-│   │   │   └── core/          # Shared components
-│   │   └── assets/            # Static assets
-├── models/                     # Sequelize models
-├── routes/                     # Express routes
-├── config/                     # Configuration files
-├── bin/                        # Server startup
-└── package.json               # Dependencies
+```text
+team-the-variable-team/
+|-- client/                     # Angular frontend
+    |-- src/
+        |-- app/
+            |-- admin/         # Admin components
+            |-- employer/      # Employer components
+            |-- student/       # Student components
+            |-- services/      # Angular services
+            |-- core/          # Shared components
+        |-- assets/            # Static assets
+|-- models/                     # Sequelize models
+|-- routes/                     # Express routes
+|-- config/                     # Configuration files
+|-- bin/                        # Server startup
+|-- package.json               # Dependencies
 ```
 
 ## User Roles & Access
@@ -329,4 +319,4 @@ This project represents our 2019 capstone work. For questions or discussions abo
 
 ---
 
-*This documentation was created in 2025 to preserve our 2019 capstone project work and document the ongoing modernization process. The original application represents the collaborative teamwork and full-stack development experience gained during our time at Southern Careers Institute.*
+*This documentation was created in 2025 to preserve and showcase our 2019 capstone project work. The application demonstrates the full-stack development skills and collaborative teamwork learned during my time at Southern Careers Institute.*

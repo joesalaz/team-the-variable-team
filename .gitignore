@@ -61,5 +61,12 @@ typings/
 .next
 /node_modules
 
-# VS Code workspace settings and local development files
+# Private interview preparation files (do not commit)
+INTERVIEW-PREP-PRIVATE.md
+*-PRIVATE.*
+interview-prep*
+*interview*prep*
+recommendation-letter.pdf
+personal.md
 .vscode-settings/
+GITHUB-ISSUE-DEPENDENCY-MODERNIZATION.md
