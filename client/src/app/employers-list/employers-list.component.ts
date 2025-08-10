@@ -8,7 +8,7 @@ import { EmpProfileViewComponent } from '../emp-profile-view/emp-profile-view.co
   selector: 'app-employers-list',
   templateUrl: './employers-list.component.html',
   styleUrls: ['./employers-list.component.css']
-})
+, standalone: false})
 export class EmployersListComponent implements OnInit {
   @ViewChild('messageDialog') messageDialog: MessageDialogComponent;
   @ViewChild('empJobposts') empJobposts: EmpJobpostsComponent;

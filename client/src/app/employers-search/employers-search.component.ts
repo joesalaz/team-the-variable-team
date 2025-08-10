@@ -7,7 +7,7 @@ import { EmpUsersService } from '../services/empusers.service';
   selector: 'app-employers-search',
   templateUrl: './employers-search.component.html',
   styleUrls: ['./employers-search.component.css']
-})
+, standalone: false})
 export class EmployersSearchComponent implements OnInit {
 
   // employers list

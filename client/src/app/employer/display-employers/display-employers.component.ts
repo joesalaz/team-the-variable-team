@@ -9,7 +9,7 @@ import { EmpUsersService } from '../../services/empusers.service';
   selector: 'app-display-employers',
   templateUrl: './display-employers.component.html',
   styleUrls: ['./display-employers.component.css']
-})
+, standalone: false})
 export class DisplayEmployersComponent implements OnInit {
   user = 'User:';
   employers: EmpUsers[] = [];

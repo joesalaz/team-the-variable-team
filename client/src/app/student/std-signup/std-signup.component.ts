@@ -7,7 +7,7 @@ import { StdUsers } from '../../angular-models/Std_Users';
   selector: 'app-std-signup',
   templateUrl: './std-signup.component.html',
   styleUrls: ['./std-signup.component.css']
-})
+, standalone: false})
 export class StdSignupComponent implements OnInit {
   stdUsers: StdUsers = new StdUsers();
   avatar: string;

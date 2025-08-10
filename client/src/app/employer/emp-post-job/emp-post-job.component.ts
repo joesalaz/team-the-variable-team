@@ -11,7 +11,7 @@ import { SafeHtmlPipe } from '../../core/safehtml.pipe';
   templateUrl: './emp-post-job.component.html',
   styleUrls: ['./emp-post-job.component.css'],
   providers: [SafeHtmlPipe]
-})
+, standalone: false})
 export class EmpPostJobComponent implements OnInit {
   @ViewChild('content') modalContent;
 

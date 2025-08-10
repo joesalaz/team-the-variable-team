@@ -5,7 +5,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-std-post-job-view',
   templateUrl: './std-post-job-view.component.html',
   styleUrls: ['./std-post-job-view.component.css']
-})
+, standalone: false})
 export class StdPostJobViewComponent implements OnInit {
 
   @ViewChild('content') modalContent;

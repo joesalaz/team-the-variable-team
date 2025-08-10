@@ -4,41 +4,41 @@ module.exports = (sequelize, DataTypes) => {
     const Std_Users = sequelize.define(
         'Std_Users',
         {
-            StudentID: {
+            studentId: {
                 type: DataTypes.INTEGER,
                 autoIncrement: true,
                 primaryKey: true
             },
-            FirstName: DataTypes.STRING,
-            LastName: DataTypes.STRING,
-            StdEmail: DataTypes.STRING,
-            StdContactNum: DataTypes.STRING,
-            ResumeOnFile: {
+            firstName: DataTypes.STRING,
+            lastName: DataTypes.STRING,
+            stdEmail: DataTypes.STRING,
+            stdContactNum: DataTypes.STRING,
+            resumeOnFile: {
                 type: DataTypes.BOOLEAN,
                 default: false,
             },
-            Major: DataTypes.STRING,
-            CoursesEnrolled: DataTypes.STRING,
-            CoursesCompleted: DataTypes.STRING,
-            StdExperience: DataTypes.STRING,
-            StdGPA: DataTypes.STRING,
-            StdAwards: DataTypes.STRING,
-            StdScholarships: DataTypes.STRING,
-            StdSkills: DataTypes.STRING,
-            Username: DataTypes.STRING,
-            Password: DataTypes.STRING,
+            major: DataTypes.STRING,
+            coursesEnrolled: DataTypes.STRING,
+            coursesCompleted: DataTypes.STRING,
+            stdExperience: DataTypes.STRING,
+            stdGPA: DataTypes.STRING,
+            stdAwards: DataTypes.STRING,
+            stdScholarships: DataTypes.STRING,
+            stdSkills: DataTypes.STRING,
+            username: DataTypes.STRING,
+            password: DataTypes.STRING,
             avatar: DataTypes.TEXT,
-            Github: DataTypes.STRING,
-            Linkedin: DataTypes.STRING,
-            Facebook: DataTypes.STRING
+            github: DataTypes.STRING,
+            linkedin: DataTypes.STRING,
+            facebook: DataTypes.STRING
         },
         {
             timestamps: false
         }
     );
 
-    Std_Users.prototype.validPassword = function validPassword(Password) {
-        return bcrypt.compare(Password, this.Password);
+    Std_Users.prototype.validPassword = function validPassword(password) {
+        return bcrypt.compare(password, this.password);
     }
 
     Std_Users.associate = function(models) {
@@ -46,14 +46,14 @@ module.exports = (sequelize, DataTypes) => {
         Std_Users.hasMany(models.Std_JobPosts, {
             as: 'jobPosts',
             foreignKey: 'StdJobCreatedById',
-            sourceKey: 'StudentID'
+            sourceKey: 'studentId'
         });
     };
     
     Std_Users.beforeCreate((user, options) => {
-        return bcrypt.hash(user.Password, 10)
+        return bcrypt.hash(user.password, 10)
         .then(hash => {
-            user.Password = hash;
+            user.password = hash;
         })
         .catch(err => { 
             throw new Error(); 

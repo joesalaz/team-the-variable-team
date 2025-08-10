@@ -1,6 +1,9 @@
 import { PipeTransform, Pipe } from "@angular/core";
 
-@Pipe({ name: 'appDate'})
+@Pipe({ 
+  name: 'appDate',
+  standalone: false
+})
 export class AppDatePipe implements PipeTransform  {
   constructor() {}
 

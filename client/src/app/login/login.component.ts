@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { EmpUsersService } from '../services/empusers.service';
 import { SessionService } from '../services/session.service';
 import { MessengerService } from '../services/messenger.service';
@@ -9,7 +9,8 @@ import { MessengerService } from '../services/messenger.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  standalone: false
 })
 export class LoginComponent implements OnInit {
 
@@ -25,6 +26,8 @@ export class LoginComponent implements OnInit {
   type: string;
   // True if there was an error loggin in
   loginError: boolean;
+  // Loading spinner state
+  showSpinner: boolean = false;
 
   ngOnInit() {
     let session = this.sessionService.getSession();

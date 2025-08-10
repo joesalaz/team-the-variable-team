@@ -20,128 +20,128 @@
 
       <form class="form-horizontal" role="form">
         <div class="form-group">
-          <label class="col-lg-3 control-label FirstName">First name:</label>
+          <label class="col-lg-3 control-label firstName">First name:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.FirstName" name="FirstName"
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.firstName" name="firstName"
               placeholder="First Name">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label LastName">Last name:</label>
+          <label class="col-lg-3 control-label lastName">Last name:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.LastName" name="LastName"
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.lastName" name="lastName"
               placeholder="Last Name">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label StdEmail">Email Address:</label>
+          <label class="col-lg-3 control-label stdEmail">Email Address:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.StdEmail" name="StdEmail" placeholder="Email">
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.stdEmail" name="stdEmail" placeholder="Email">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label StdContactNum">Contact Number:</label>
+          <label class="col-lg-3 control-label stdContactNum">Contact Number:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.StdContactNum" name="StdContactNum"
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.stdContactNum" name="stdContactNum"
               placeholder="000-000-0000">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label StdExperience">Work/Education Experience:</label>
+          <label class="col-lg-3 control-label stdExperience">Work/Education Experience:</label>
           <div class="col-lg-8">
-            <textarea class="form-control" type="text" rows="10" [(ngModel)]="stdUsers.StdExperience"
-              name="StdExperience"
+            <textarea class="form-control" type="text" rows="10" [(ngModel)]="stdUsers.stdExperience"
+              name="stdExperience"
               placeholder="Enter any school projects you've worked on & and years of work experience you may have."></textarea>
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Resume Name:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.ResumeOnFile" name="ResumeOnFile" placeholder="Resume Title">
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.resumeOnFile" name="resumeOnFile" placeholder="Resume Title">
             <input type="file" class="form-control">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label Major">Majoring In:</label>
+          <label class="col-lg-3 control-label major">majoring In:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.Major" name="Major"
-              placeholder="What is your Major/s">
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.major" name="major"
+              placeholder="What is your major/s">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label CoursesEnrolled">Courses Taking:</label>
+          <label class="col-lg-3 control-label coursesEnrolled">Courses Taking:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.CoursesEnrolled" name="CoursesEnrolled"
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.coursesEnrolled" name="coursesEnrolled"
               placeholder="What Courses are you in?">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label CoursesCompleted">Courses Completed:</label>
+          <label class="col-lg-3 control-label coursesCompleted">Courses Completed:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.CoursesCompleted" name="CoursesCompleted"
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.coursesCompleted" name="coursesCompleted"
               placeholder="What Courses have you completed?">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label StdGPA">Current GPA:</label>
+          <label class="col-lg-3 control-label stdGPA">Current GPA:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.StdGPA" name="StdGPA" placeholder="0.0">
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.stdGPA" name="stdGPA" placeholder="0.0">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label StdAwards">Individual Awards:</label>
+          <label class="col-lg-3 control-label stdAwards">Individual Awards:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.StdAwards" name="StdAwards"
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.stdAwards" name="stdAwards"
               placeholder="Any Awards?">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label StdScholarships">Scholarships Granted:</label>
+          <label class="col-lg-3 control-label stdScholarships">Scholarships Granted:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.StdScholarships" name="StdScholarships"
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.stdScholarships" name="stdScholarships"
               placeholder="Any Scholarships?">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label StdSkills">Skills/Hobbies:</label>
+          <label class="col-lg-3 control-label stdSkills">Skills/Hobbies:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.StdSkills" name="StdSkills"
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.stdSkills" name="stdSkills"
               placeholder="List your Skills & Hobbies">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label StdSkills">Github:</label>
+          <label class="col-lg-3 control-label stdSkills">github:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.Github" name="Github"
-              placeholder="Github profile">
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.github" name="github"
+              placeholder="github profile">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label StdSkills">Linkedin:</label>
+          <label class="col-lg-3 control-label stdSkills">linkedin:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.Linkedin" name="Linkedin"
-              placeholder="Linkedin profile">
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.linkedin" name="linkedin"
+              placeholder="linkedin profile">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label StdSkills">Facebook:</label>
+          <label class="col-lg-3 control-label stdSkills">facebook:</label>
           <div class="col-lg-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.Facebook" name="Facebook"
-              placeholder="Facebook profile">
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.facebook" name="facebook"
+              placeholder="facebook profile">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-md-3 control-label Username">Username:</label>
+          <label class="col-md-3 control-label username">username:</label>
           <div class="col-md-8">
-            <input class="form-control" type="text" [(ngModel)]="stdUsers.Username" name="Username"
-              placeholder="Desired Username">
+            <input class="form-control" type="text" [(ngModel)]="stdUsers.username" name="username"
+              placeholder="Desired username">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-md-3 control-label Password">Password:</label>
+          <label class="col-md-3 control-label password">password:</label>
           <div class="col-md-8">
-            <input class="form-control" type="password" [(ngModel)]="stdUsers.Password" name="Password"
-              placeholder="Desired Password">
+            <input class="form-control" type="password" [(ngModel)]="stdUsers.password" name="password"
+              placeholder="Desired password">
           </div>
         </div>
         <div class="form-group">

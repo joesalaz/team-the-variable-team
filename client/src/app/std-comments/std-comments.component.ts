@@ -7,7 +7,7 @@ import { SessionService } from '../services/session.service';
   selector: 'app-std-comments',
   templateUrl: './std-comments.component.html',
   styleUrls: ['./std-comments.component.css']
-})
+, standalone: false})
 export class StdCommentsComponent implements OnInit {
   @ViewChild('content') modalContent;
 

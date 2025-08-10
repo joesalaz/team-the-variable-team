@@ -7,7 +7,7 @@ import { SessionService } from '../services/session.service';
   selector: 'app-message-dialog',
   templateUrl: './message-dialog.component.html',
   styleUrls: ['./message-dialog.component.css']
-})
+, standalone: false})
 export class MessageDialogComponent implements OnInit {
   @ViewChild('content') modalContent;
   // Reference to the list of messages

@@ -30,15 +30,15 @@
     <th text-align="center">Student First Name</th>
     <th text-align="center">student Last Name</th>
     <th text-align="center">User Name</th>
-    <th text-align="center">Password</th>
+    <th text-align="center">password</th>
   </thead>
   <tbody text-align="center">
     <tr *ngFor="let student of students" text-align="center">
       <td>{{student.ID}}</td>
-      <td>{{student.FirstName}}</td>
-      <td>{{student.LastName}}</td>
-      <td>{{student.Username}}</td>
-      <td>{{student.Password}}</td>
+      <td>{{student.firstName}}</td>
+      <td>{{student.lastName}}</td>
+      <td>{{student.username}}</td>
+      <td>{{student.password}}</td>
       <button>Open</button> 
       <button>Edit</button>
       <button>Delete</button>
@@ -57,15 +57,15 @@
     <th >Company Name</th>
     <th >Company Web</th>
     <th >User Name</th>
-    <th >Password</th>
+    <th >password</th>
   </thead>
   <tbody text-align="center">
     <tr *ngFor="let employer of employers" text-align="center">
       <td >{{employer.ID}}</td> 
-      <td>{{employer.CompanyName}}</td>
-      <td>{{employer.CompanyWeb}}</td>
-      <td>{{employer.Username}}</td>
-      <td>{{employer.Password}}</td>
+      <td>{{employer.companyName}}</td>
+      <td>{{employer.companyWeb}}</td>
+      <td>{{employer.username}}</td>
+      <td>{{employer.password}}</td>
       <button>Open</button> 
       <button>Edit</button>
       <button>Delete</button>
@@ -82,10 +82,10 @@
 
       <h2>Contact Us</h2>
       <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <input type="text" id="fname" name="firstName" placeholder="Your name..">
 
       <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <input type="text" id="lname" name="lastName" placeholder="Your last name..">
 
       <label for="country">Country</label>
       <select id="country" name="country">

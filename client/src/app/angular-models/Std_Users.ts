@@ -16,7 +16,7 @@ export class StdUsers {
     username: string;
     password: string;
     avatar: string;
-    Github: string;
-    Linkedin: string;
-    Facebook: string;
+    github: string;
+    linkedin: string;
+    facebook: string;
 }

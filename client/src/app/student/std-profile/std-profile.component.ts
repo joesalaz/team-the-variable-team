@@ -16,7 +16,8 @@ import { CommentsComponent } from '../../comments/comments.component';
 @Component({
   selector: 'app-std-profile',
   templateUrl: './std-profile.component.html',
-  styleUrls: ['./std-profile.component.css']
+  styleUrls: ['./std-profile.component.css'],
+  standalone: false
 })
 export class StdProfileComponent implements OnInit {
   @ViewChild('postJobForm') postJobForm: EmpPostJobComponent;

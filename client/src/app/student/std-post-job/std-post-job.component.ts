@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Input, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { StdJobPostsService } from '../../services/stdjobposts.service'
-import { StdJobPosts} from '../../angular-models/std_JobPosts';
+import { StdJobPosts} from '../../angular-models/Std_JobPosts';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { SafeHtmlPipe } from '../../core/safehtml.pipe';
@@ -11,7 +11,7 @@ import { SafeHtmlPipe } from '../../core/safehtml.pipe';
   selector: 'app-std-post-job',
   templateUrl: './std-post-job.component.html',
   styleUrls: ['./std-post-job.component.css']
-})
+, standalone: false})
 export class StdPostJobComponent implements OnInit {
   @ViewChild('content') modalContent;
 

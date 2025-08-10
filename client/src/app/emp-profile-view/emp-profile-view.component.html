@@ -3,7 +3,7 @@
     <img *ngIf="!employer?.avatar" class="avatar" src="../../assets/images/placeholder-face-big.png" alt="" />
     <img *ngIf="employer?.avatar" class="avatar" [src]="('data:image/png;base64, ' + employer.avatar) | safeHtml:'resource'" alt="" />
     <h4 class="modal-title">
-        {{ employer?.CompanyName }}
+        {{ employer?.companyName }}
     </h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
@@ -16,11 +16,11 @@
         <b>Contact Info</b>
       </div>
       <div class="info-box-body">
-        <span>{{ employer?.CompanyContact }}</span>
+        <span>{{ employer?.companyContact }}</span>
         <br>
-        <span>{{ employer?.CompContactNum }}</span>
+        <span>{{ employer?.compContactNum }}</span>
         <br>
-        <span>{{ employer?.CompanyEmail }}</span>
+        <span>{{ employer?.companyEmail }}</span>
       </div>
     </div>
     <div class="info-box">
@@ -28,9 +28,9 @@
         <b>Profile</b>
       </div>
       <div class="info-box-body">
-        <span>{{ employer?.CompIndustry }}</span>
+        <span>{{ employer?.compIndustry }}</span>
         <br />
-        <a [href]="employer?.CompanyWeb">Visit website</a>
+        <a [href]="employer?.companyWeb">Visit website</a>
         <br>
       </div>
     </div>

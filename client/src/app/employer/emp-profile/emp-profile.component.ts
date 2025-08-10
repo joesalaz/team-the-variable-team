@@ -16,7 +16,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   selector: 'app-emp-profile',
   templateUrl:'./emp-profile.component.html',
   styleUrls: ['./emp-profile.component.css']
-})
+, standalone: false})
 export class EmpProfileComponent implements OnInit {
   @ViewChild('postJobForm') postJobForm: EmpPostJobComponent;
   @ViewChild('comments') commentsView: CommentsComponent;

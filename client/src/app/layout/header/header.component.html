@@ -23,13 +23,13 @@
             <p *ngIf="message?.EmpCreator">
                 <img *ngIf="!message?.EmpCreator?.avatar" class="avatar" src="../../assets/images/placeholder-face-big.png" alt="" />
                 <img *ngIf="message?.EmpCreator?.avatar" class="avatar" [src]="('data:image/png;base64, ' + message?.EmpCreator?.avatar) | safeHtml:'resource'" alt="" />
-                {{ message?.EmpCreator?.CompanyName }}
+                {{ message?.EmpCreator?.companyName }}
             </p>
             <p *ngIf="message?.StdCreator">
                 <img *ngIf="!message?.StdCreator?.avatar" class="avatar" src="../../assets/images/placeholder-face-big.png" alt="" />
                 <img *ngIf="message?.StdCreator?.avatar" class="avatar" [src]="('data:image/png;base64, ' + message?.StdCreator?.avatar) | safeHtml:'resource'" alt="" />
-                {{ message?.StdCreator?.FirstName || '' }}
-                {{ message?.StdCreator?.LastName || '' }}
+                {{ message?.StdCreator?.firstName || '' }}
+                {{ message?.StdCreator?.lastName || '' }}
             </p>
             <p class="text">
               {{ message.Message }}

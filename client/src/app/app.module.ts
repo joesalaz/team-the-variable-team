@@ -15,12 +15,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { EmpProfEditComponent } from './employer/emp-prof-edit/emp-prof-edit.component';
 import { AdminComponent } from './admin/admin.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { DisplayEmployersComponent } from './employer/display-employers/display-employers.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { EmpJobpostsComponent } from './employer/emp-jobposts/emp-jobposts.component';
 import { StdJobpostsComponent } from './student/std-jobposts/std-jobposts.component';
-import { MatToolbarModule, MatSelectModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
 import { EmpProfileComponent } from './employer/emp-profile/emp-profile.component';
 import { EmpPostJobModule } from './employer/emp-post-job/emp-post-job.module';
 //Text Editor Imports
@@ -82,9 +83,10 @@ import { StdProfileViewComponent } from './std-profile-view/std-profile-view.com
     //Text Editor Imports
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot(),
-    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent],
   
 })

@@ -8,7 +8,7 @@ import { StdProfileViewComponent } from '../std-profile-view/std-profile-view.co
   selector: 'app-students-list',
   templateUrl: './students-list.component.html',
   styleUrls: ['./students-list.component.css']
-})
+, standalone: false})
 export class StudentsListComponent implements OnInit {
   @ViewChild('messageDialog') messageDialog: MessageDialogComponent;
   @ViewChild('stdJobposts') stdJobposts: StdJobpostsComponent;

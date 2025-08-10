@@ -5,7 +5,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-std-profile-view',
   templateUrl: './std-profile-view.component.html',
   styleUrls: ['./std-profile-view.component.css']
-})
+, standalone: false})
 export class StdProfileViewComponent implements OnInit {
   @ViewChild('content') modalContent;
   student;

@@ -6,7 +6,7 @@ import { EmpJobPostsService } from '../services/empjobposts.service';
   selector: 'app-comments',
   templateUrl: './comments.component.html',
   styleUrls: ['./comments.component.css']
-})
+, standalone: false})
 export class CommentsComponent implements OnInit {
   @ViewChild('content') modalContent;
 

@@ -3,18 +3,18 @@
     <img *ngIf="!student?.avatar" class="avatar" src="../../assets/images/placeholder-face-big.png" alt="" />
     <img *ngIf="student?.avatar" class="avatar" [src]="('data:image/png;base64, ' + student?.avatar) | safeHtml:'resource'" alt="" />
     <h4 class="modal-title">
-        {{ student?.FirstName }} {{ student?.LastName }}
+        {{ student?.firstName }} {{ student?.lastName }}
     </h4>
     <div class="social-icons-container">
-      <a target=_blank *ngIf="student?.Github" [href]="student?.Github">
+      <a target=_blank *ngIf="student?.github" [href]="student?.github">
         <img class="social-icon" src="../../assets/images/github-icons.png" alt="" />
       </a>
       <br />
-      <a target=_blank *ngIf="student?.Linkedin" [href]="student?.Linkedin">
+      <a target=_blank *ngIf="student?.linkedin" [href]="student?.linkedin">
         <img class="social-icon" src="../../assets/images/linkedin-icons.png" alt="" />
       </a>
       <br />
-      <a target=_blank *ngIf="student?.Facebook" [href]="student?.Facebook">
+      <a target=_blank *ngIf="student?.facebook" [href]="student?.facebook">
         <img class="social-icon" src="../../assets/images/fb-icons.png" alt="" />
       </a>
     </div>
@@ -28,9 +28,9 @@
         <b>Contact Info</b>
       </div>
       <div class="info-box-body">
-        <span>{{ student?.StdContactNum }}</span>
+        <span>{{ student?.stdContactNum }}</span>
         <br>
-        <span>{{ student?.StdEmail }}</span>
+        <span>{{ student?.stdEmail }}</span>
       </div>
     </div>
     <div class="info-box">
@@ -38,11 +38,11 @@
         <b>Student Details</b>
       </div>
       <div class="info-box-body">
-        <b>Major:</b><span> {{ student?.Major }}</span>
+        <b>major:</b><span> {{ student?.major }}</span>
         <br>
-        <b>Student Experience</b>: {{ student?.StdExperience }} 
+        <b>Student Experience</b>: {{ student?.stdExperience }} 
         <br>
-        <b>Skills</b>: {{ student?.StdSkills }}
+        <b>Skills</b>: {{ student?.stdSkills }}
       </div>
     </div>
     <div class="info-box">
@@ -50,11 +50,11 @@
         <b>Accomplishments</b>
       </div>
       <div class="info-box-body">
-        <b>Scholarships:</b>&nbsp;<span>{{ student?.StdScholarships }}</span>
+        <b>Scholarships:</b>&nbsp;<span>{{ student?.stdScholarships }}</span>
         <br>
-        <b>Awards:</b>&nbsp;<span>{{ student?.StdAwards }}</span>
+        <b>Awards:</b>&nbsp;<span>{{ student?.stdAwards }}</span>
         <br>
-        <b>GPA:</b>&nbsp;<span>{{ student?.StdGPA }}</span>
+        <b>GPA:</b>&nbsp;<span>{{ student?.stdGPA }}</span>
       </div>
     </div>
     <div class="info-box">
@@ -62,9 +62,9 @@
         <b>Courses</b>
       </div>
       <div class="info-box-body">
-        <b>Courses Enrolled:</b>&nbsp;<span>{{ student?.CoursesEnrolled }}</span>
+        <b>Courses Enrolled:</b>&nbsp;<span>{{ student?.coursesEnrolled }}</span>
         <br>
-        <b>Courses Completed:</b>&nbsp;<span>{{ student?.CoursesCompleted }}</span>
+        <b>Courses Completed:</b>&nbsp;<span>{{ student?.coursesCompleted }}</span>
       </div>
     </div>
     

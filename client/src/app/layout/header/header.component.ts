@@ -9,7 +9,7 @@ import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
-})
+, standalone: false})
 export class HeaderComponent implements OnInit {
   @ViewChild('messageDialog') messageDialog: MessageDialogComponent;
   

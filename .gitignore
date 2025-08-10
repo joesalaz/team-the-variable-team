@@ -61,12 +61,12 @@ typings/
 .next
 /node_modules
 
+# Angular build cache
+client/.angular/
+
 # Private interview preparation files (do not commit)
-INTERVIEW-PREP-PRIVATE.md
-*-PRIVATE.*
-interview-prep*
-*interview*prep*
-recommendation-letter.pdf
+
+
 personal.md
 .vscode-settings/
-GITHUB-ISSUE-DEPENDENCY-MODERNIZATION.md
+

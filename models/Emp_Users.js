@@ -9,27 +9,27 @@ module.exports = (sequelize, DataTypes) => {
                 autoIncrement: true,
                 primaryKey: true
             },
-            CompanyName: DataTypes.STRING,
-            CompanyWeb: DataTypes.STRING,
-            CompanyEmail: DataTypes.STRING,
-            CompanyContact: DataTypes.STRING,
-            CompContactNum: DataTypes.STRING,
-            CompIndustry: DataTypes.STRING,
-            Username: DataTypes.STRING,
-            Password: DataTypes.STRING,
+            companyName: DataTypes.STRING,
+            companyWeb: DataTypes.STRING,
+            companyEmail: DataTypes.STRING,
+            companyContact: DataTypes.STRING,
+            compContactNum: DataTypes.STRING,
+            compIndustry: DataTypes.STRING,
+            username: DataTypes.STRING,
+            password: DataTypes.STRING,
             avatar: DataTypes.TEXT
         },
         {
             timestamps: false,
             instanceMethods: {
-                validPassword: (Password) => {
-                    return bcrypt.compare(Password, this.Password);
+                validPassword: (password) => {
+                    return bcrypt.compare(password, this.password);
                 }
             }
         }
     );
-    Emp_Users.prototype.validPassword = function validPassword(Password) {
-        return bcrypt.compare(Password, this.Password);
+    Emp_Users.prototype.validPassword = function validPassword(password) {
+        return bcrypt.compare(password, this.password);
     }
     Emp_Users.associate = function(models) {
         // associations can be defined here
@@ -40,9 +40,9 @@ module.exports = (sequelize, DataTypes) => {
         });
     };
     Emp_Users.beforeCreate((user, options) => {
-        return bcrypt.hash(user.Password, 10)
+        return bcrypt.hash(user.password, 10)
         .then(hash => {
-            user.Password = hash;
+            user.password = hash;
         })
         .catch(err => { 
             throw new Error(); 

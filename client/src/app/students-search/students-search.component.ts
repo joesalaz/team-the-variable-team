@@ -10,7 +10,7 @@ import { StdUsersService } from '../services/stdusers.service';
     './students-search.component.css',
     '../employer/emp-profile/emp-profile.component.css',
   ]
-})
+, standalone: false})
 export class StudentsSearchComponent implements OnInit {
 
   // Students list

@@ -8,37 +8,37 @@
         </div>
         <div>
           <br>
-          <b>Student:</b>: {{ student?.FirstName }} {{ student?.LastName }}
+          <b>Student:</b>: {{ student?.firstName }} {{ student?.lastName }}
           <br>
-          <b>Student Experience</b>: {{ student?.StdExperience }} 
+          <b>Student Experience</b>: {{ student?.stdExperience }} 
           <br>
           <b>Contact Info:</b>
           <br>
-          <span>{{ student?.StdContactNum }}</span>
+          <span>{{ student?.stdContactNum }}</span>
           <br>
-          <span>{{ student?.StdEmail }}</span>
+          <span>{{ student?.stdEmail }}</span>
           <br>
           <b>Accomplishments:</b>
           <br>
-          <span>{{ student?.StdScholarships }}</span>
+          <span>{{ student?.stdScholarships }}</span>
           <br>
-          <span>{{ student?.StdAwards }}</span>
+          <span>{{ student?.stdAwards }}</span>
           <br>
-          <span>{{ student?.StdGPA }}</span>
+          <span>{{ student?.stdGPA }}</span>
           <br>
-          <b>Skills</b>: {{ student?.StdSkills }}
+          <b>Skills</b>: {{ student?.stdSkills }}
           <br>
           <b>Courses Enrolled:</b>
           <br>
-          <span>{{ student?.CoursesEnrolled }}</span>
+          <span>{{ student?.coursesEnrolled }}</span>
           <br>
           <b>Courses Completed:</b>
           <br>
-          <span>{{ student?.CoursesCompleted }}</span>
+          <span>{{ student?.coursesCompleted }}</span>
           <br>
-          <b>Major:</b>
+          <b>major:</b>
           <br>
-          <span>{{ student?.Major }}</span>
+          <span>{{ student?.major }}</span>
         </div>
     </div>
     <div class="network-links-column">
@@ -47,15 +47,15 @@
         </div>
         <div class="network-links-body">
           <div class="social-icons-container">
-              <a target=_blank *ngIf="student?.Github" [href]="student?.Github">
+              <a target=_blank *ngIf="student?.github" [href]="student?.github">
                 <img class="social-icon" src="../../assets/images/github-icons.png" alt="" />
               </a>
               <br />
-              <a target=_blank *ngIf="student?.Linkedin" [href]="student?.Linkedin">
+              <a target=_blank *ngIf="student?.linkedin" [href]="student?.linkedin">
                 <img class="social-icon" src="../../assets/images/linkedin-icons.png" alt="" />
               </a>
               <br />
-              <a target=_blank *ngIf="student?.Facebook" [href]="student?.Facebook">
+              <a target=_blank *ngIf="student?.facebook" [href]="student?.facebook">
                 <img class="social-icon" src="../../assets/images/fb-icons.png" alt="" />
               </a>
           </div>
