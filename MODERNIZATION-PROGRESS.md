@@ -145,6 +145,111 @@ Getting the app working on Angular 19 is just the first step. Now I can move for
 
 The modernization created a solid foundation for taking this employment seeking app to its full potential.
 
+## Phase 2 Planning: Complete App Redesign (Planned)
+
+Now that the technical foundation is solid, the next big challenge is addressing the UX and data structure problems that have been bugging me since 2019. This phase will transform the app from looking like a student project to something professional.
+
+### The Authentication UX Problem
+
+The current login/signup flow is genuinely confusing:
+
+1. User selects "Student" or "Employer" from dropdown
+2. User enters username/password
+3. User must decide AGAIN whether to click "Login", "Employer Signup", or "Student Signup"
+
+This double decision-making pattern doesn't match modern job platforms. Sites like Indeed use separate entry points: "Find Jobs" vs "Post Jobs" that immediately put users in the right mindset.
+
+**Modern UX Solution:**
+
+- Create proper marketing landing page (`/`) with clear value propositions
+- Implement role-based auth flows: `/students` and `/employers`
+- Each path tailored with specific messaging and user journey
+- Remove confusing dropdown selections and duplicate decisions
+
+### The Embarrassing Model Names Issue
+
+My 2019 teammates chose database model names that sound unprofessional:
+
+**Current models:** `Std_Users`, `Emp_Users`, `Std_JobPosts`, `Emp_JobPosts`
+
+These abbreviations are bad for several reasons:
+
+- "Std_Users" honestly sounds like a medical condition  
+- Inconsistent with modern naming conventions
+- Creates duplicate logic for essentially the same data types
+- Embarrassing to show in portfolio code
+
+**Database Redesign Strategy:**
+
+*Current Structure:*
+
+```Std_Users (student users)
+Emp_Users (employer users) 
+Std_JobPosts (student job posts)
+Emp_JobPosts (employer job posts)
+```
+
+*New Unified Structure:*
+
+```Users (single table with role field: 'student' | 'employer')
+JobPosts (single table with posted_by_role field)
+```
+
+This unified approach:
+
+- Eliminates duplicate user logic
+- Follows modern database design patterns
+- Makes the codebase more maintainable
+- Allows for role switching (students graduating to employers)
+
+### Technical Implementation Plan
+
+**Database Migration Strategy:**
+
+1. Create new unified tables (`Users`, `JobPosts`)
+2. Write migration scripts to preserve all existing data
+3. Add foreign key relationships and constraints
+4. Update all API endpoints to use new schema
+5. Remove old embarrassing table names
+
+**Frontend Modernization:**
+
+- Build marketing landing page using Angular 19 standalone components
+- Create separate authentication flows for each user type
+- Update all services and models to use unified data structure
+- Implement new Angular 19 Control Flow syntax (`@if`, `@for`, `@switch`)
+- Add proper responsive design for mobile users
+
+**Angular 19 Benefits:**
+
+- Use standalone components for new landing page (cleaner architecture)
+- Leverage modern Angular patterns for authentication flows
+- Implement new lifecycle hooks and performance optimizations
+- Practice with latest Angular features on real project
+
+### Expected Challenges
+
+**Data Migration Complexity:**
+
+- Must preserve all existing user accounts and job posts
+- Need to maintain foreign key relationships during transition
+- API backward compatibility during migration period
+
+**UX Flow Changes:**
+
+- Current users familiar with existing (confusing) flow
+- Need to ensure new flows are intuitive without training
+- Mobile responsiveness requirements
+
+**Full-Stack Integration:**
+
+- Backend API changes for unified user model
+- Frontend service layer refactoring
+- Database relationship updates
+- Authentication system modifications
+
+This phase represents a complete transformation from the technical debt cleanup of Phase 1 to addressing fundamental UX and architecture decisions that will make the app truly professional.
+
 ## Lessons Learned
 
 1. **Research before fixing** - Understanding why something is broken is more valuable than just making it work

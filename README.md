@@ -312,9 +312,63 @@ This project served as our capstone at Southern Careers Institute, demonstrating
 - **Problem Solving**: Real-world technical challenges
 - **Professional Standards**: Code quality and documentation
 
-## License
+## License & Philosophy
 
-This project was developed for educational purposes at Southern Careers Institute.
+### Why AGPL v3 with Anti-Predatory Protections?
+
+This project is licensed under **GNU Affero General Public License v3.0** with additional anti-predatory clauses. Here's why:
+
+#### The Original Vision
+
+When our team built this platform in 2019, our goal was to create something that could genuinely help students like ourselves. We wanted to build a platform that would:
+
+- **Showcase our learned skills** to potential employers
+- **Connect students with real opportunities** in web and software development
+- **Provide a practical tool** that addresses the real struggles of students entering the workforce
+- **Demonstrate our capability** to build production-ready applications
+
+#### Protecting the Mission
+
+As I am moderniing this project in 2025, I realized that student job platforms are prime targets for predatory business models. Too many platforms exploit desperate students with:
+
+- "Free" job searching that turns into premium subscription traps
+- Charges for applying to jobs (when applications should always be free)
+- Advertisement-heavy platforms that prioritize profit over student success
+- Hidden fees that kick in just when students need the platform most
+
+#### The Solution: Strong Copyleft Protection
+
+**AGPL v3 ensures that anyone using this code must:**
+
+- **Open-source their entire platform** (including web services)
+- **Keep all student-facing features free** (commercial exploitation is discouraged)
+- **Contribute improvements back** to the community
+- **Maintain transparency** about their business model
+
+#### What This Means for Students and Developers
+
+**For Students:** Any platform built from this code must remain transparent and student-focused.
+
+**For Developers:** You're welcome to learn from, improve, and build upon this work for:
+
+- Educational projects and portfolios
+- Non-profit job placement services  
+- Open-source contributions
+- Research and academic use
+
+**For Employers:** This demonstrates our commitment to ethical software development and protecting end users.
+
+**For Investors/Companies:** If you want to build a commercial platform using this code, you must open-source your entire operation - which naturally discourages predatory business models.
+
+#### The Bottom Line
+
+This license choice reflects our values: **technology should serve students, not exploit them.** The job search process is stressful enough without platforms that prey on desperation.
+
+By choosing AGPL v3, we ensure this code contributes to a more ethical job market for students in tech.
+
+### License Details
+
+See [LICENSE.md](./LICENSE.md) for complete licensing terms and anti-predatory protections.
 
 ## Contributing
 
@@ -324,7 +378,7 @@ This project represents our 2019 capstone work. For questions or discussions abo
 
 **Project Revival & Documentation**: Jose Salazar
 
-- Email: <joesalaz.dev@gmail.com>
+- Email: <JSalazar.dev@outlook.com>
 - LinkedIn: [linkedin.com/in/jose-salazar-a7103b1b7](https://linkedin.com/in/jose-salazar-a7103b1b7)
 - GitHub: [github.com/joesalaz](https://github.com/joesalaz)
 
