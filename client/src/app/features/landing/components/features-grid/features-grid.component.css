@@ -1,0 +1,44 @@
+/* Features Section Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features {
+    padding: 6rem 0;
+    background: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* CSS Grid automatically adjusts columns based on screen size */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

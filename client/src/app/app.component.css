@@ -1,0 +1,16 @@
+/* Global styles for the fixed header layout */
+
+/* Account for fixed header height - approx 70px */
+router-outlet + * {
+    padding-top: 80px;
+}
+
+/* Ensure the landing page hero section accounts for header */
+app-landing-page {
+    display: block;
+}
+
+/* Fix any z-index issues with modals/dropdowns */
+.modal, .dropdown-menu, .pop {
+    z-index: 1050;
+}

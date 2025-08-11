@@ -1,0 +1,65 @@
+/* Landing Footer Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer */
+.footer {
+    background: #263238;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: #81c784;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+    padding: 0.25rem 0;
+}
+
+.footer-section a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid #37474f;
+    padding-top: 1rem;
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.1rem;
+    }
+}

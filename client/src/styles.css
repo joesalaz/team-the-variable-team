@@ -43,6 +43,25 @@ background: #e6eae8;
   z-index: 1048 !important;
 }
 
+/* Fix Angular Material Select dropdown backdrop issue */
+.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing,
+.cdk-high-contrast-active .cdk-overlay-transparent-backdrop {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Ensure Material Select overlays work properly */
+.cdk-overlay-pane {
+  pointer-events: auto !important;
+}
+
+.mat-select-panel {
+  z-index: 1050 !important;
+  pointer-events: auto !important;
+}
+
 /* Fix any potential Froala editor z-index conflicts */
 .fr-wrapper {
   z-index: auto !important;

@@ -26,13 +26,33 @@ export class SessionService {
   }
 
   /**
-   * Logout the session 
+   * Logout the user with optional redirect destination
+   * @param redirectTo - The route to redirect to after logout (default: landing page)
    */
-  logout() {
-      localStorage.removeItem('userId');
-      localStorage.removeItem('userType');
-      localStorage.clear();
-      // hard redirect to login, to clear the session
-      window.location.href = '/login';
+  logout(redirectTo: string = '/'): void {
+    // Clear all session data
+    localStorage.removeItem('userId');
+    localStorage.removeItem('userType');
+    localStorage.clear();
+    
+    // Use window.location for now to avoid Router injection issues
+    window.location.href = redirectTo;
+  }
+
+  /**
+   * Check if user is currently authenticated
+   */
+  isAuthenticated(): boolean {
+    const session = this.getSession();
+    return !!(session.userId && session.userType);
+  }
+
+  /**
+   * Clear session without redirect (useful for programmatic logout)
+   */
+  clearSession(): void {
+    localStorage.removeItem('userId');
+    localStorage.removeItem('userType');
+    localStorage.clear();
   }
 }

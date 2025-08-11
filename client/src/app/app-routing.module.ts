@@ -11,9 +11,11 @@ import { DisplayEmployersComponent } from './employer/display-employers/display-
 import { HeaderComponent } from './layout/header/header.component';
 import { StudentsSearchComponent } from './students-search/students-search.component';
 import { EmployersSearchComponent } from './employers-search/employers-search.component';
+import { LandingPageComponent } from './features/landing/landing-page/landing-page.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: LandingPageComponent }, // New default landing page
+  { path: 'landing', component: LandingPageComponent }, // Also accessible via /landing
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'empsignup', component: EmpSignupComponent },

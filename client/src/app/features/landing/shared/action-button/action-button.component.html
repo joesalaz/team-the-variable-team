@@ -1,0 +1,5 @@
+<a [href]="href" 
+   [class]="'btn btn-' + variant + (size === 'large' ? ' btn-large' : '')">
+    <span *ngIf="icon" class="material-icons">{{ icon }}</span>
+    {{ text }}
+</a>

@@ -1,0 +1,72 @@
+/* Call to Action Section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cta {
+    background: linear-gradient(135deg, #424242 0%, #616161 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons app-action-button {
+    display: inline-block;
+}
+
+/* Override button styles for CTA section */
+.cta-buttons app-action-button .btn-secondary {
+    color: white;
+    border-color: white;
+}
+
+.cta-buttons app-action-button .btn-secondary:hover {
+    background: white;
+    color: #424242;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta {
+        padding: 3rem 0;
+    }
+    
+    .cta h2 {
+        font-size: 2rem;
+    }
+    
+    .cta p {
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}

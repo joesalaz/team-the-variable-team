@@ -38,6 +38,7 @@ import { EmployersSearchComponent } from './employers-search/employers-search.co
 import { StdCommentsComponent } from './std-comments/std-comments.component';
 import { EmpProfileViewComponent } from './emp-profile-view/emp-profile-view.component';
 import { StdProfileViewComponent } from './std-profile-view/std-profile-view.component';
+import { LandingHeaderComponent } from './features/landing/components/landing-header/landing-header.component';
 
 
 @NgModule({
@@ -80,6 +81,7 @@ import { StdProfileViewComponent } from './std-profile-view/std-profile-view.com
     MatSelectModule,
     EmpPostJobModule,
     StdPostJobModule,
+    LandingHeaderComponent, // Standalone component import
     //Text Editor Imports
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot(),

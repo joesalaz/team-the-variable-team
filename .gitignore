@@ -64,10 +64,17 @@ typings/
 # Angular build cache
 client/.angular/
 
+# Database files (migrations handle database setup)
+*.sqlite3
+*.db
+
 # Private interview preparation files (do not commit)
-
-
 personal.md
 .vscode-settings/
 issue.md
 landing-page-samples.html
+dashboard-sample.html
+DASHBOARD-PLANNING.md
+COMMIT-STRATEGY.md
+.github/ISSUE_TEMPLATE/
+client/src/app/services/session.service.examples.md

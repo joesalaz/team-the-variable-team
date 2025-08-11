@@ -1,0 +1,71 @@
+<!-- Universal Header - Works for both landing and authenticated users -->
+<header class="header">
+    <nav class="container">
+        <div class="nav">
+            <div class="logo">
+                <a routerLink="/" class="logo-link">LaunchPad</a>
+            </div>
+            
+            <!-- Dynamic Navigation -->
+            <ul class="nav-links">
+                <li *ngFor="let item of navigationItems">
+                    <a [routerLink]="item.link" class="nav-link">
+                        <span class="material-icons" *ngIf="item.icon">{{ item.icon }}</span>
+                        {{ item.label }}
+                    </a>
+                </li>
+                
+                <!-- Authentication Actions -->
+                <li *ngIf="!isAuthenticated">
+                    <a routerLink="/login" class="btn btn-secondary">Sign In</a>
+                </li>
+                
+                <!-- User Menu for Authenticated Users -->
+                <li *ngIf="isAuthenticated" class="user-menu">
+                    <!-- Messages Button -->
+                    <div class="messages-container">
+                        <button class="messages-btn simple-btn"
+                                (click)="toggleMessagesDropdown()">
+                            <span class="material-icons">mail</span>
+                            <span *ngIf="unreadMessageCount > 0" class="message-badge">{{ unreadMessageCount }}</span>
+                        </button>
+                        
+                        <!-- Simple dropdown -->
+                        <div *ngIf="showMessagesDropdown" class="messages-dropdown">
+                            <div *ngIf="!messengerService.incoming || messengerService.incoming.length === 0" 
+                                 class="no-messages">
+                                No messages
+                            </div>
+                            
+                            <div *ngFor="let message of messengerService.incoming" 
+                                 class="message-item"
+                                 [class.unread]="!message.Read"
+                                 (click)="openMessageDialog(message)">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="sender-name">
+                                            <span *ngIf="message.EmployerCreatorID">Employer ID: {{ message.EmployerCreatorID }}</span>
+                                            <span *ngIf="message.StudentCreatorID">Student ID: {{ message.StudentCreatorID }}</span>
+                                        </span>
+                                    </div>
+                                    <div class="message-text">{{ message.Message }}</div>
+                                    <div class="message-date">{{ message.Created | date:'short' }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- User Info and Logout -->
+                    <div class="user-info">
+                        <span class="material-icons">account_circle</span>
+                        <span class="user-type">{{ userType | titlecase }}</span>
+                        <button class="logout-btn" (click)="logout()">
+                            <span class="material-icons">logout</span>
+                            Logout
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
