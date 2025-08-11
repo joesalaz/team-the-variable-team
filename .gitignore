@@ -71,7 +71,6 @@ client/.angular/
 # Private interview preparation files (do not commit)
 personal.md
 .vscode-settings/
-issue.md
 landing-page-samples.html
 dashboard-sample.html
 DASHBOARD-PLANNING.md
